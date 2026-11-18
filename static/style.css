@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+form button {
+    background: #2563eb;
+    color: white;
+}
+
+form button:hover {
+    background: #1d4ed8;
+}
+
+h2 {
+    margin: 25px 0 15px;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtro {
+    background: #e5e7eb;
+    color: #333;
+}
+
+.filtro:hover {
+    background: #d1d5db;
+}
+
+.filtro.ativo {
+    background: #2563eb;
+    color: white;
+}
+
+#lista-tarefas {
+    list-style: none;
+}
+
+#lista-tarefas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.descricao {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.concluida {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-concluir {
+    background: #16a34a;
+    color: white;
+}
+
+.btn-excluir {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-concluir:hover {
+    background: #15803d;
+}
+
+.btn-excluir:hover {
+    background: #b91c1c;
+}
+
+#mensagem {
+    margin: 15px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .filtros {
+        flex-wrap: wrap;
+    }
+
+    #lista-tarefas li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

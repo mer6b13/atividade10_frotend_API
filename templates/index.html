@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Gerenciador de Tarefas</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Meu Gerenciador de Tarefas</h1>
+
+        <p>Organize suas atividades diárias!</p>
+
+        <form id="form-tarefa">
+
+            <input
+                type="text"
+                id="descricao"
+                placeholder="Digite uma nova tarefa..."
+                required
+            >
+
+            <button type="submit">Adicionar tarefa</button>
+
+        </form>
+
+        <div id="mensagem"></div>
+
+        <h2>Minhas tarefas</h2>
+
+        <div class="filtros">
+
+            <button class="filtro ativo" data-filtro="todas">
+                Todas
+            </button>
+
+            <button class="filtro" data-filtro="pendentes">
+                Pendentes
+            </button>
+
+            <button class="filtro" data-filtro="concluidas">
+                Concluídas
+            </button>
+
+        </div>
+
+        <ul id="lista-tarefas"></ul>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
